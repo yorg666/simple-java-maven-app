@@ -17,7 +17,9 @@ pipeline{
             }
             post{
                 always{
-                    junit './target/surefire-reports/*.xml'
+                    sh 'echo current directory:'
+                    sh 'pwd'
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
